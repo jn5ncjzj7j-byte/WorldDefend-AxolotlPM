@@ -1,0 +1,27 @@
+name: Build plugin
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          extensions: phar
+      - name: Check PHP syntax
+        run: find src -name '*.php' -print0 | xargs -0 -n1 php -l
+      - name: Build PHAR
+        run: |
+          mkdir -p build
+          php -d phar.readonly=0 -r '$phar = new Phar("build/WorldDefendAxolotl.phar"); $phar->startBuffering(); $phar->buildFromDirectory(getcwd(), "/^(plugin\\.yml|resources\\/.*|src\\/.*)$/"); $phar->setStub("<?php __HALT_COMPILER();"); $phar->stopBuffering();'
+      - uses: actions/upload-artifact@v4
+        with:
+          name: WorldDefendAxolotl
+          path: build/WorldDefendAxolotl.phar
+          if-no-files-found: error
