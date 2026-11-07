@@ -1,0 +1,18 @@
+lobby-world: lobby
+main-world: world
+countdown-seconds: 5
+protected-worlds:
+  - lobby
+gamemodes:
+  lobby: adventure
+  world: survival
+messages:
+  countdown: "§eTeleporting in §f{seconds}§e seconds..."
+  cancelled: "§cTeleport cancelled because you moved."
+  teleported: "§aTeleported."
+  world-missing: "§cThat world is not loaded."
+  protected: "§cBuilding is disabled in this world."
+  home-saved: "§aHome {slot} saved."
+  home-missing: "§cYou have not set home {slot}."
+  usage-home: "§cUse /home <1|2>."
+  usage-sethome: "§cUse /sethome <1|2>."
