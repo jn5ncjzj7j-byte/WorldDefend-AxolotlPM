@@ -35,7 +35,11 @@ final class Main extends PluginBase implements Listener{
     }
 
     public function onJoin(PlayerJoinEvent $event) : void{
-        $this->applyWorldMode($event->getPlayer());
+        $player = $event->getPlayer();
+        $this->applyWorldMode($player);
+        if((bool) $this->getConfig()->get("send-players-to-lobby-on-join", true)){
+            $this->getScheduler()->scheduleDelayedTask(new JoinLobbyTask($this, $player), 1);
+        }
     }
 
     public function onMove(PlayerMoveEvent $event) : void{
