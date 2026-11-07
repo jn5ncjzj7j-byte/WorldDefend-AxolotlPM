@@ -2,20 +2,20 @@
 
 declare(strict_types=1);
 
-namespace axolotl\\worlddefend;
+namespace axolotl\worlddefend;
 
-use pocketmine\\entity\\Location;
-use pocketmine\\event\\Listener;
-use pocketmine\\event\\block\\BlockBreakEvent;
-use pocketmine\\event\\block\\BlockPlaceEvent;
-use pocketmine\\event\\entity\\EntityTeleportEvent;
-use pocketmine\\event\\player\\PlayerJoinEvent;
-use pocketmine\\event\\player\\PlayerMoveEvent;
-use pocketmine\\event\\player\\PlayerQuitEvent;
-use pocketmine\\player\\GameMode;
-use pocketmine\\player\\Player;
-use pocketmine\\plugin\\PluginBase;
-use pocketmine\\world\\Position;
+use pocketmine\entity\Location;
+use pocketmine\event\Listener;
+use pocketmine\event\block\BlockBreakEvent;
+use pocketmine\event\block\BlockPlaceEvent;
+use pocketmine\event\entity\EntityTeleportEvent;
+use pocketmine\event\player\PlayerJoinEvent;
+use pocketmine\event\player\PlayerMoveEvent;
+use pocketmine\event\player\PlayerQuitEvent;
+use pocketmine\player\GameMode;
+use pocketmine\player\Player;
+use pocketmine\plugin\PluginBase;
+use pocketmine\world\Position;
 
 final class Main extends PluginBase implements Listener{
 
