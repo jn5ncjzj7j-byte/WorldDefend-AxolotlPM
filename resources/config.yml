@@ -1,5 +1,6 @@
 lobby-world: lobby
 main-world: world
+send-players-to-lobby-on-join: true
 countdown-seconds: 5
 protected-worlds:
   - lobby
