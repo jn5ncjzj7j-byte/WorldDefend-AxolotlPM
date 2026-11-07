@@ -1,6 +1,6 @@
 name: WorldDefendAxolotl
 main: axolotl\worlddefend\Main
-version: 1.0.0
+version: 1.0.1
 api: 5.0.0
 author: OpenAI
 description: Per-world lobby protection, gamemodes, warps and player homes
