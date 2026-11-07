@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace axolotl\\worlddefend;
+namespace axolotl\worlddefend;
 
-use pocketmine\\event\\Listener;
-use pocketmine\\event\\block\\BlockBreakEvent;
-use pocketmine\\event\\block\\BlockPlaceEvent;
-use pocketmine\\event\\player\\PlayerJoinEvent;
-use pocketmine\\event\\player\\PlayerMoveEvent;
-use pocketmine\\player\\GameMode;
-use pocketmine\\player\\Player;
-use pocketmine\\plugin\\PluginBase;
-use pocketmine\\world\\Position;
+use pocketmine\event\Listener;
+use pocketmine\event\block\BlockBreakEvent;
+use pocketmine\event\block\BlockPlaceEvent;
+use pocketmine\event\player\PlayerJoinEvent;
+use pocketmine\event\player\PlayerMoveEvent;
+use pocketmine\player\GameMode;
+use pocketmine\player\Player;
+use pocketmine\plugin\PluginBase;
+use pocketmine\world\Position;
 
 final class Main extends PluginBase implements Listener{
 
@@ -120,9 +120,7 @@ final class Main extends PluginBase implements Listener{
             "world" => $player->getWorld()->getFolderName(),
             "x" => $pos->getX(),
             "y" => $pos->getY(),
-            "z" => $pos->getZ(),
-            "yaw" => $player->getLocation()->getYaw(),
-            "pitch" => $player->getLocation()->getPitch()
+            "z" => $pos->getZ()
         ];
         $this->saveHomes();
         $player->sendMessage(str_replace("{slot}", (string) $slot, $this->message("home-saved")));
