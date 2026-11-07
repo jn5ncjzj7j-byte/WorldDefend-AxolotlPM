@@ -19,7 +19,7 @@ jobs:
       - name: Build PHAR
         run: |
           mkdir -p build
-          php -d phar.readonly=0 -r '$phar = new Phar("build/WorldDefendAxolotl.phar"); $phar->startBuffering(); $phar->buildFromDirectory(getcwd(), "/^(plugin\\.yml|resources\\/.*|src\\/.*)$/"); $phar->setStub("<?php __HALT_COMPILER();"); $phar->stopBuffering();'
+          php -d phar.readonly=0 -r '$phar = new Phar("build/WorldDefendAxolotl.phar"); $phar->startBuffering(); $phar->buildFromDirectory(getcwd(), "~^(plugin\\.yml|resources/.*|src/.*)$~"); $phar->setStub("<?php __HALT_COMPILER();"); $phar->stopBuffering();'
       - uses: actions/upload-artifact@v4
         with:
           name: WorldDefendAxolotl
