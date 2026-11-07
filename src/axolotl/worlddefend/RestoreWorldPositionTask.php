@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace axolotl\\worlddefend;
+namespace axolotl\worlddefend;
 
-use pocketmine\\player\\Player;
-use pocketmine\\scheduler\\Task;
+use pocketmine\player\Player;
+use pocketmine\scheduler\Task;
 
 final class RestoreWorldPositionTask extends Task{
 
