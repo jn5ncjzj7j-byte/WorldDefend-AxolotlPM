@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace axolotl\\worlddefend;
+namespace axolotl\worlddefend;
 
-use pocketmine\\player\\Player;
-use pocketmine\\scheduler\\Task;
-use pocketmine\\world\\Position;
-use pocketmine\\world\\World;
+use pocketmine\player\Player;
+use pocketmine\scheduler\Task;
+use pocketmine\world\Position;
+use pocketmine\world\World;
 
 final class CountdownTask extends Task{
 
